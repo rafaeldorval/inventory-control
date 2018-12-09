@@ -1,0 +1,27 @@
+[
+    {
+        "group": "admin",
+        "permissions": [
+            {
+                "resource": "stock/*",
+                "methods": ["POST", "GET", "PUT", "DELETE"],
+                "action": "deny"
+            }
+        ]
+    },
+    {
+        "group": "guest",
+        "permissions": [
+            {
+                "resource": "/stock",
+                "methods": ["GET"],
+                "action": "allow"
+            },
+            {
+                "resource": "/auth/authenticate",
+                "methods": ["GET", "POST", "PUT"],
+                "action": "allow"
+            }
+        ]
+    }
+]
